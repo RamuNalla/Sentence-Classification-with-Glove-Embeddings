@@ -21,7 +21,7 @@ def preprocess_document_text(text):
     translator = str.maketrans(string.punctuation, ' ' * len(string.punctuation))       # creates a translation table that maps string.punctuation (.,!?) to a space character
 
     text = text.translate(translator)
-    text = re.sub(r'\s+', ' ', text).strip()
+    text = re.sub(r'\s+', ' ', text).strip()            # All multiple spaces are eliminated and strip removes leading and trailing spaces
 
     if not text:
         return []
